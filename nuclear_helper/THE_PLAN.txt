@@ -1,0 +1,22 @@
+# This work follows the work of https://cds.cern.ch/record/2788683/files/2110.04016.pdf and https://journals.aps.org/prc/pdf/10.1103/PhysRevC.102.054907
+# The alpha cluster model is a simple model to describe the alpha cluster structure of oxygen.
+# It describes each oxygen nucleus as a cluster of 4 alpha particles in a tetrahedral configuration with a fixed distance between the alpha particles.
+# It contains a random orientation of the tetrahedron in space.
+# Each alpha particle is described by a Summed Gaussian distribution from de Vries
+
+# The plan:
+# * Generate random orientation of the tetrahedron (two angles)
+# * Get the vector pointing to the origin of each alpha-particle, by rotating the vector of proper length by the two angles
+# * Add a gaussian smearing to the positions in the end
+# * Plot a nice 3D projection of the alpha-nucleus
+
+# * Make a 2D projection of the centers of the alpha-particles
+# * Generate the positions of the nucleons in the 4 different alpha particles from the Woods-Saxon distribution
+# * Add them with the vectors pointing to the origin of the alpha-particles
+# * Reuse the code you have to add the hotspots to the nucleus at those positions
+
+# * Celebrate, because you have done it!
+
+
+# PARAMETERS:
+# The tetrahedron has an arm length of 3.42 fm, I would include a Gaussian fluctuation of sigma=0.1 fm in the arm length
