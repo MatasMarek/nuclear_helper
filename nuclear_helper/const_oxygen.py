@@ -21,15 +21,10 @@ parameters_de_Vries = {
 
 fitted_parameters_for_integrated_deVries = [0.34612513, 0.40327957, 0.44270309, 0.44577645, 2.79883639]
 
-# Parameters of the oxygen tetrahedron
-
-
 # Hotspot number determination
 p0 = 0.011
 p0_hatta = 0.015
 p1 = -0.58
 p2 = 300.
-
-# Grid parameters
 
 

@@ -3,11 +3,14 @@ from plotting import plot_tetrahedron, plot_2D_nuclear_density
 from tetrahedron_geometry import generate_random_tetrahedron, make_2D_projection
 from alpha_particle_generation import get_alpha_particle_hotspot_positions
 from grid_oxygen import make_b_grid, one_direction
-from scipy.integrate import simps
+from scipy.integrate import simpson as simps
+
 
 def hotspot_profile(distances, params):
     # Calculate the hotspot profile
     Bhs = params['Bhs']
+    # Convert Bhs to fm^2
+    Bhs = Bhs * 0.19732697**2
     return np.exp(-distances**2/(2.*Bhs))/(2.*np.pi*Bhs)
 
 def get_hotspot_centers(x, params):
@@ -51,7 +54,7 @@ def get_density(n_of_bs=200, b_max=6., tetrahedron_length=3.42, tetrahedron_spre
     density, hotspots, vertices_2D, vertices_3D = generate_oxygen_hotspot_density(x, params)
     # normalize the density to one
     single_axis = one_direction(params['n_of_bs'], params['b_max'])
-    integral = simps(simps(density, single_axis), single_axis)
+    integral = simps(simps(density, x=single_axis), x=single_axis)
     density = density / integral
     # Plot the 3D density
     if plot:
@@ -63,4 +66,8 @@ def get_density(n_of_bs=200, b_max=6., tetrahedron_length=3.42, tetrahedron_spre
     else:
         return single_axis, density
 
-axis, density = get_density()
+while True:
+    axis, density = get_density(plot=True, x=0.00001)
+
+
+
