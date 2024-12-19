@@ -1,7 +1,7 @@
 import numpy as np
-from const_oxygen import fitted_parameters_for_integrated_deVries as popt
-from hostpot_number_nucleon import get_number_of_hotspots
-from get_parametrization_for_integrated_deVries import de_Vries_radial_profile, nuclear_profile
+from .const_oxygen import fitted_parameters_for_integrated_deVries as popt
+from .hostpot_number_nucleon import get_number_of_hotspots
+from .get_parametrization_for_integrated_deVries import de_Vries_radial_profile, nuclear_profile
 
 
 def get_hotspot_distances_for_alpha_particle(number_of_hotspots):

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import simps
 from scipy.optimize import curve_fit
-from const_oxygen import parameters_de_Vries, gamma
+from .const_oxygen import parameters_de_Vries, gamma
 
 
 

@@ -2,3 +2,6 @@
 *.idea
 .DS_Store
 venv
+build/
+dist/
+nuclear_helper.egg-info/

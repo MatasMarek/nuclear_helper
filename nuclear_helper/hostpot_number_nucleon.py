@@ -1,5 +1,5 @@
 import numpy as np
-import const_oxygen as c
+from . import const_oxygen as c
 
 def get_number_of_hotspots_real(x):
     return c.p0 * x ** c.p1 * (1. + c.p2 * np.sqrt(x))

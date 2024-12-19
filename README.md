@@ -80,7 +80,7 @@ def get_density(
 
 ```python
 import numpy as np
-from nuclear_helper import get_density
+from nuclear_helper.oxygen import get_density
 
 # Compute the density with default parameters and plot the results
 axis, density = get_density(plot=True)
@@ -98,7 +98,7 @@ This will generate:
 To ensure reproducible results, set the `seed` parameter:
 
 ```python
-from nuclear_helper import get_density
+from nuclear_helper.oxygen import get_density
 
 # Generate a density map with a fixed seed for debugging and reproducibility
 axis, density = get_density(seed=42, plot=False)
@@ -109,7 +109,7 @@ axis, density = get_density(seed=42, plot=False)
 If you need the 3D coordinates of hadrons or the projected 2D coordinates of the tetrahedron vertices, use `positions=True`:
 
 ```python
-from nuclear_helper import get_density
+from nuclear_helper.oxygen import get_density
 
 hotspots, vertices_2D, vertices_3D = get_density(positions=True)
 print("Hotspots shape:", hotspots.shape)
@@ -122,7 +122,7 @@ print("3D vertices shape:", vertices_3D.shape)
 You can vary parameters like `b_max` or `n_of_bs` to adjust the resolution and size of the grid:
 
 ```python
-from nuclear_helper import get_density
+from nuclear_helper.oxygen import get_density
 
 # Increase the resolution and maximum grid size
 axis, density = get_density(n_of_bs=300, b_max=8.0, plot=True)

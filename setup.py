@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='alpha_cluster_oxygen',
+    name='nuclear_helper',
     version='0.1.0',
     description='A package to compute the hotspot structure of a tetrahedral alpha-clustered oxygen',
     url='https://github.com/MatasMarek/nuclear_helper',
@@ -16,8 +16,6 @@ setup(
 
     classifiers=[
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: GNU License',
-        'Operating System :: MACOS :: Linux',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
