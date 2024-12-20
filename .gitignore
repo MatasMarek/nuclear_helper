@@ -3,5 +3,6 @@
 .DS_Store
 venv
 build/
-dist/
 nuclear_helper.egg-info/
+cpp_example/
+/cpp_example/

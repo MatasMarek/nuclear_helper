@@ -1,8 +1,8 @@
 import numpy as np
-from .plotting import plot_tetrahedron, plot_2D_nuclear_density
-from .tetrahedron_geometry import generate_random_tetrahedron, make_2D_projection
-from .alpha_particle_generation import get_alpha_particle_hotspot_positions
-from .grid_oxygen import make_b_grid, one_direction
+from nuclear_helper.plotting import plot_tetrahedron, plot_2D_nuclear_density
+from nuclear_helper.tetrahedron_geometry import generate_random_tetrahedron, make_2D_projection
+from nuclear_helper.alpha_particle_generation import get_alpha_particle_hotspot_positions
+from nuclear_helper.grid_oxygen import make_b_grid, one_direction
 from scipy.integrate import simpson as simps
 
 
@@ -65,6 +65,3 @@ def get_density(n_of_bs=200, b_max=6., tetrahedron_length=3.42, tetrahedron_spre
         return hotspots, vertices_2D, vertices_3D
     else:
         return single_axis, density
-
-
-
