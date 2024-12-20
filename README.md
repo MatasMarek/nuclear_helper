@@ -21,10 +21,10 @@ This Python library provides tools to generate and analyze the stochastic struct
   Set a seed for reproducible, deterministic configurations—useful for debugging and consistency checks.
 
 ## Quick start - TLDR
-Install the library using pip:
+Install the library using pip (Python 3.6+ required):
 
 ```bash
-pip install nuclear-helper
+pip install nuclear_helper
 ```
 
 Then, you can use the library in your Python code:
