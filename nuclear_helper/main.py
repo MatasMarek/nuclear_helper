@@ -65,4 +65,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-# To compile a new distribution, run the following command: pyinstaller --onedir main.py
+# To compile a new distribution, run the following command: pyinstaller --onedir nuclear_helper.py
+# but before that you have to source ../.venv/bin/activate
+"""
+
+"""
