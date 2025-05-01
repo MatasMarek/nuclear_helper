@@ -172,7 +172,13 @@ The format of the output files is as follows:
 - `hotspots.txt`: 3D coordinates of the centers of the hotspots generated within hadrons. [fm]
 - `vertices_2D.txt`: 2D coordinates of the vertices of the tetrahedron projected onto the transverse plane. [fm]
 - `vertices_3D.txt`: 3D coordinates of the vertices of the tetrahedron. [fm]
-- `density.txt`: 2D density map of the hot-spot distribution. Each line corresponds to a row of the density map.
+- `density.txt`: 2D density map of the hot-spot distribution. Each line corresponds to a row of the density map. The format therefore is
+  ```
+  T[iby0][ibx0] T[iby0][ibx1] ... T[iby0][ibxn]
+  T[iby1][ibx0] T[iby1][ibx1] ... T[iby1][ibxn]
+  ...
+  T[ibyn][ibx0] T[ibyn][ibx1] ... T[ibyn][ibxn]
+  ```
 - `single_axis.txt`: 1D array of the spatial grid points in the transverse plane. [fm]
 
 
