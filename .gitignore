@@ -7,3 +7,4 @@ build/
 nuclear_helper.egg-info/
 cpp_example/
 /cpp_example/
+.venv
