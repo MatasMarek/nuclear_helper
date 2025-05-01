@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='nuclear_helper',
-    version='0.1.0',
+    version='1.1.0',
     description='A package to compute the hotspot structure of a tetrahedral alpha-clustered oxygen',
     url='https://github.com/MatasMarek/nuclear_helper',
     author='Marek Matas',

@@ -2,8 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import simps
 from scipy.optimize import curve_fit
-from .const_oxygen import parameters_de_Vries, gamma
-
+from nuclear_helper.const_oxygen import parameters_de_Vries, gamma
 
 
 def nuclear_profile(bs, c1, c2, c3, c4, c5):

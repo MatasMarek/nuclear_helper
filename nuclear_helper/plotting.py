@@ -58,6 +58,7 @@ def plot_tetrahedron(vertices, hotspots):
     plt.tight_layout()
 
     # Display the plot
+    plt.savefig('tetrahedron.pdf')
     plt.show()
 
 def plot_2D_nuclear_density(density, params):
@@ -66,9 +67,10 @@ def plot_2D_nuclear_density(density, params):
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
+    # if b_grid is in params, plot the 2D density on the b_grid and make up for the log-scale of the b_grid
+
     # Define the extent of the axes
     extent = [-limit, limit, -limit, limit]
-
     # Plot the density with the specified extent
     im = ax.imshow(density, cmap='BrBG', origin='lower', extent=extent)
 
@@ -81,5 +83,6 @@ def plot_2D_nuclear_density(density, params):
     ax.set_ylabel('Y [fm]')
     plt.tight_layout()
     # Display the plot
+    plt.savefig('nuclear_density.pdf')
     plt.show()
     plt.close()

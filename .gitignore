@@ -1,4 +1,5 @@
 *.pdf
+tests_and_misc/
 *.idea
 .DS_Store
 venv
