@@ -4248,7 +4248,7 @@ def test_errorbar_every(fig_test, fig_ref):
                          capsize=4, c=color)
 
         # Using manual errorbars
-        # n.b. errorbar draws the main plot at z=2.1 by default
+        # n.b. errorbar draws the nuclear_helper plot at z=2.1 by default
         ax_ref.plot(x, y, c=color, zorder=2.1)
         ax_ref.errorbar(x[shift::4], y[shift::4], yerr[shift::4],
                         capsize=4, c=color, fmt='none')

@@ -574,7 +574,7 @@ class FigureManagerQT(FigureManagerBase):
         else:
             tbs_height = 0
 
-        # resize the main window so it will display the canvas with the
+        # resize the nuclear_helper window so it will display the canvas with the
         # requested size:
         cs = canvas.sizeHint()
         cs_height = cs.height()

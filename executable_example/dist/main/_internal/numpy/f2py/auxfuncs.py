@@ -932,7 +932,7 @@ def process_f2cmap_dict(f2cmap_all, new_map, c2py_map, verbose = False):
     ----------
     f2cmap_all : dict
         The existing Fortran-to-C type mapping dictionary that will be updated.
-        It should be a dictionary of dictionaries where the main keys represent
+        It should be a dictionary of dictionaries where the nuclear_helper keys represent
         Fortran types and the nested dictionaries map Fortran type specifiers
         to corresponding C types.
 

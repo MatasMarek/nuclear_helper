@@ -2182,7 +2182,7 @@ def identity(n, dtype=None, *, like=None):
     Return the identity array.
 
     The identity array is a square array with ones on
-    the main diagonal.
+    the nuclear_helper diagonal.
 
     Parameters
     ----------
@@ -2197,7 +2197,7 @@ def identity(n, dtype=None, *, like=None):
     Returns
     -------
     out : ndarray
-        `n` x `n` array with its main diagonal set to one,
+        `n` x `n` array with its nuclear_helper diagonal set to one,
         and all other elements 0.
 
     Examples

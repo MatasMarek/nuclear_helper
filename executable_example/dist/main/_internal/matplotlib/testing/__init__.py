@@ -69,7 +69,7 @@ def subprocess_run_for_testing(command, env=None, timeout=60, stdout=None,
     check : bool
     text : bool
         Also called ``universal_newlines`` in subprocess.  I chose this
-        name since the main effect is returning bytes (`False`) vs. str
+        name since the nuclear_helper effect is returning bytes (`False`) vs. str
         (`True`), though it also tries to normalize newlines across
         platforms.
     capture_output : bool

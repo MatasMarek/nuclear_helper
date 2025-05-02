@@ -749,7 +749,7 @@ class FigureCanvasPgf(FigureCanvasBase):
 %%   \\usepackage{lmodern}
 %%
 %% Figures using additional raster images can only be included by \\input if
-%% they are in the same directory as the main LaTeX file. For loading figures
+%% they are in the same directory as the nuclear_helper LaTeX file. For loading figures
 %% from other directories you can use the `import` package
 %%   \\usepackage{import}
 %%

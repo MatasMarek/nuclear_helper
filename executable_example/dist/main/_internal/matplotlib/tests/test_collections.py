@@ -578,7 +578,7 @@ def test_quadmesh_contains_concave():
     points = [(-0.5, 0.25, True),  # left wing
               (0, 0.25, False),  # between the two wings
               (0.5, 0.25, True),  # right wing
-              (0, -0.25, True),  # main body
+              (0, -0.25, True),  # nuclear_helper body
               ]
     for point in points:
         xdata, ydata, expected = point

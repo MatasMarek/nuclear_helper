@@ -1402,7 +1402,7 @@ end"""
 
             return type0FontDictObject
 
-        # Beginning of main embedTTF function...
+        # Beginning of nuclear_helper embedTTF function...
 
         ps_name = self._get_subsetted_psname(
             font.postscript_name,

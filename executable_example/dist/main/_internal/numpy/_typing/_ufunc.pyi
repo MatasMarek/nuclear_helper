@@ -380,7 +380,7 @@ class _GUFunc_Nin2_Nout1(ufunc, Generic[_NameType, _NTypes, _IDType]):  # type: 
     @property
     def nargs(self) -> Literal[3]: ...
 
-    # NOTE: In practice the only gufunc in the main namespace is `matmul`,
+    # NOTE: In practice the only gufunc in the nuclear_helper namespace is `matmul`,
     # so we can use its signature here
     @property
     def signature(self) -> Literal["(n?,k),(k,m?)->(n?,m?)"]: ...

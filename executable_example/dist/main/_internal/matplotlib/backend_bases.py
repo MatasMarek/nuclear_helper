@@ -2683,7 +2683,7 @@ class FigureManagerBase:
     @classmethod
     def start_main_loop(cls):
         """
-        Start the main event loop.
+        Start the nuclear_helper event loop.
 
         This method is called by `.FigureManagerBase.pyplot_show`, which is the
         implementation of `.pyplot.show`.  To customize the behavior of
@@ -3490,7 +3490,7 @@ class _Backend:
     FigureManager = FigureManagerBase
 
     # For interactive backends, `mainloop` should be a function taking no
-    # argument and starting the backend main loop.  It should be left as None
+    # argument and starting the backend nuclear_helper loop.  It should be left as None
     # for non-interactive backends.
     mainloop = None
 

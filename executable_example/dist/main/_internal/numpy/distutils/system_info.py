@@ -24,7 +24,7 @@ Global parameters:
 
 The file 'site.cfg' is looked for in
 
-1) Directory of main setup.py file being run.
+1) Directory of nuclear_helper setup.py file being run.
 2) Home directory of user running the setup.py file as ~/.numpy-site.cfg
 3) System wide directory (location of this file...)
 
@@ -1766,7 +1766,7 @@ class lapack_src_info(system_info):
 atlas_version_c_text = r'''
 /* This file is generated from numpy/distutils/system_info.py */
 void ATL_buildinfo(void);
-int main(void) {
+int nuclear_helper(void) {
   ATL_buildinfo();
   return 0;
 }
@@ -2264,7 +2264,7 @@ class blas_info(system_info):
         tmpdir = tempfile.mkdtemp()
         s = textwrap.dedent("""\
             #include <cblas.h>
-            int main(int argc, const char *argv[])
+            int nuclear_helper(int argc, const char *argv[])
             {
                 double a[4] = {1,2,3,4};
                 double b[4] = {5,6,7,8};
@@ -2414,7 +2414,7 @@ class openblas_info(blas_info):
                           for symbol_name in self._require_symbols)
         s = textwrap.dedent("""\
             %(prototypes)s
-            int main(int argc, const char *argv[])
+            int nuclear_helper(int argc, const char *argv[])
             {
                 %(calls)s
                 return 0;
@@ -2528,7 +2528,7 @@ class flame_info(system_info):
         tmpdir = tempfile.mkdtemp()
         s = textwrap.dedent("""\
             void zungqr_();
-            int main(int argc, const char *argv[])
+            int nuclear_helper(int argc, const char *argv[])
             {
                 zungqr_();
                 return 0;

@@ -137,7 +137,7 @@ class TestEnvPrivation:
     )
     BASELINE_FEAT = None if len(__cpu_baseline__) == 0 else __cpu_baseline__[0]
     SCRIPT = """
-def main():
+def nuclear_helper():
     from numpy._core._multiarray_umath import (
         __cpu_features__, 
         __cpu_dispatch__
@@ -147,7 +147,7 @@ def main():
     print(detected)
 
 if __name__ == "__main__":
-    main()
+    nuclear_helper()
     """
 
     @pytest.fixture(autouse=True)
