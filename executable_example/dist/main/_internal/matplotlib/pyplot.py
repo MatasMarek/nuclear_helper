@@ -539,7 +539,7 @@ def _warn_if_gui_out_of_main_thread() -> None:
                 warn = True
     if warn:
         _api.warn_external(
-            "Starting a Matplotlib GUI outside of the nuclear_helper thread will likely "
+            "Starting a Matplotlib GUI outside of the main thread will likely "
             "fail.")
 
 
@@ -573,7 +573,7 @@ def show(*args, **kwargs) -> None:
     block : bool, optional
         Whether to wait for all figures to be closed before returning.
 
-        If `True` block and run the GUI nuclear_helper loop until all figure windows
+        If `True` block and run the GUI main loop until all figure windows
         are closed.
 
         If `False` ensure that all figure windows are displayed and return

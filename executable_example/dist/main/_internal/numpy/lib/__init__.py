@@ -4,7 +4,7 @@ belong in core or in another NumPy submodule with a clear purpose
 (e.g. ``random``, ``fft``, ``linalg``, ``ma``).
 
 ``numpy.lib``'s private submodules contain basic functions that are used by
-other public modules and are useful to have in the nuclear_helper name-space.
+other public modules and are useful to have in the main name-space.
 
 """
 
@@ -76,7 +76,7 @@ def __getattr__(attr):
     ):
         raise AttributeError(
             f"numpy.lib.{attr} is now private. If you are using a public "
-            "function, it should be available in the nuclear_helper numpy namespace, "
+            "function, it should be available in the main numpy namespace, "
             "otherwise check the NumPy 2.0 migration guide."
         )
     elif attr == "arrayterator":

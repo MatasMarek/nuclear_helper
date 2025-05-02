@@ -405,7 +405,7 @@ class Type1Font:
 
     def _split(self, data):
         """
-        Split the Type 1 font into its three nuclear_helper parts.
+        Split the Type 1 font into its three main parts.
 
         The three parts are: (1) the cleartext part, which ends in a
         eexec operator; (2) the encrypted part; (3) the fixed part,

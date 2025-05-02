@@ -131,7 +131,7 @@ class StemContainer(Container):
         markerline_stemlines_baseline : tuple
             Tuple of ``(markerline, stemlines, baseline)``.
             ``markerline`` contains the `.Line2D` of the markers,
-            ``stemlines`` is a `.LineCollection` of the nuclear_helper lines,
+            ``stemlines`` is a `.LineCollection` of the main lines,
             ``baseline`` is the `.Line2D` of the baseline.
         """
         markerline, stemlines, baseline = markerline_stemlines_baseline

@@ -3047,12 +3047,12 @@ def diagonal(x, /, *, offset=0):
         Input array having shape (..., M, N) and whose innermost two
         dimensions form MxN matrices.
     offset : int, optional
-        Offset specifying the off-diagonal relative to the nuclear_helper diagonal,
+        Offset specifying the off-diagonal relative to the main diagonal,
         where::
 
-            * offset = 0: the nuclear_helper diagonal.
-            * offset > 0: off-diagonal above the nuclear_helper diagonal.
-            * offset < 0: off-diagonal below the nuclear_helper diagonal.
+            * offset = 0: the main diagonal.
+            * offset > 0: off-diagonal above the main diagonal.
+            * offset < 0: off-diagonal below the main diagonal.
 
     Returns
     -------
@@ -3091,12 +3091,12 @@ def trace(x, /, *, offset=0, dtype=None):
         Input array having shape (..., M, N) and whose innermost two
         dimensions form MxN matrices.
     offset : int, optional
-        Offset specifying the off-diagonal relative to the nuclear_helper diagonal,
+        Offset specifying the off-diagonal relative to the main diagonal,
         where::
 
-            * offset = 0: the nuclear_helper diagonal.
-            * offset > 0: off-diagonal above the nuclear_helper diagonal.
-            * offset < 0: off-diagonal below the nuclear_helper diagonal.
+            * offset = 0: the main diagonal.
+            * offset > 0: off-diagonal above the main diagonal.
+            * offset < 0: off-diagonal below the main diagonal.
 
     dtype : dtype, optional
         Data type of the returned array.

@@ -1221,7 +1221,7 @@ class TestDTypeMakeCanonical:
         Check most properties relevant to "canonical" versions of a dtype,
         which is mainly native byte order for datatypes supporting this.
 
-        The nuclear_helper work is checking structured dtypes with fields, where we
+        The main work is checking structured dtypes with fields, where we
         reproduce most the actual logic used in the C-code.
         """
         assert type(dtype) is type(canonical)

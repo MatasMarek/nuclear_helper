@@ -1593,7 +1593,7 @@ def ship(box: Box, xy: tuple[float, float] = (0, 0)) -> Output:
     """
     Ship out *box* at offset *xy*, converting it to an `Output`.
 
-    Since boxes can be inside of boxes inside of boxes, the nuclear_helper work of `ship`
+    Since boxes can be inside of boxes inside of boxes, the main work of `ship`
     is done by two mutually recursive routines, `hlist_out` and `vlist_out`,
     which traverse the `Hlist` nodes and `Vlist` nodes inside of horizontal
     and vertical boxes.  The global variables used in TeX to store state as it
@@ -2176,7 +2176,7 @@ class Parser:
         # prevent operator spacing from leaking into a new expression
         self._em_width_cache = {}
         ParserElement.resetCache()
-        return T.cast(Hlist, result[0])  # Known return type from nuclear_helper.
+        return T.cast(Hlist, result[0])  # Known return type from main.
 
     def get_state(self) -> ParserState:
         """Get the current `State` of the parser."""

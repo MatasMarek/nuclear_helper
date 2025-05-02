@@ -4,7 +4,7 @@ A layoutgrid is a nrows by ncols set of boxes, meant to be used by
 a gridspec.
 
 Each box is defined by left[ncols], right[ncols], bottom[nrows] and top[nrows],
-and by two editable margins for each side.  The nuclear_helper margin gets its value
+and by two editable margins for each side.  The main margin gets its value
 set by the size of ticklabels, titles, etc on each Axes that is in the figure.
 The outer margin is the padding around the Axes, and space for any
 colorbars.

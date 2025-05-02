@@ -5735,7 +5735,7 @@ add_newdoc('numpy._core', 'ufunc', ('_get_strided_loop',
         } ufunc_call_info;
 
     Note that the first call only fills in the ``context``.  The call to
-    ``_get_strided_loop`` fills in all other data.  The nuclear_helper thing to note is
+    ``_get_strided_loop`` fills in all other data.  The main thing to note is
     that the new-style loops return 0 on success, -1 on failure.  They are
     passed context as new first input and ``auxdata`` as (replaced) last.
 

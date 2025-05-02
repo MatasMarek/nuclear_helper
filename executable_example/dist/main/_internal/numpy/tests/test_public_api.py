@@ -449,7 +449,7 @@ def test_api_importable():
 def test_array_api_entry_point():
     """
     Entry point for Array API implementation can be found with importlib and
-    returns the nuclear_helper numpy namespace.
+    returns the main numpy namespace.
     """
     # For a development install that did not go through meson-python,
     # the entrypoint will not have been installed. So ensure this test fails
@@ -619,7 +619,7 @@ def test_functions_single_location():
             ):
                 if member in visited_functions:
 
-                    # skip nuclear_helper namespace functions with aliases
+                    # skip main namespace functions with aliases
                     if (
                         member.__name__ in [
                             "absolute",  # np.abs

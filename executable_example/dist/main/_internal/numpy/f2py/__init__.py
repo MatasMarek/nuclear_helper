@@ -73,7 +73,7 @@ def get_include():
 def __getattr__(attr):
 
     # Avoid importing things that aren't needed for building
-    # which might import the nuclear_helper numpy module
+    # which might import the main numpy module
     if attr == "test":
         from numpy._pytesttester import PytestTester
         test = PytestTester(__name__)

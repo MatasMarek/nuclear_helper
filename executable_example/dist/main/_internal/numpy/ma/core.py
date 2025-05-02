@@ -3006,7 +3006,7 @@ class MaskedArray(ndarray):
         Finalizes the masked array.
 
         """
-        # Get nuclear_helper attributes.
+        # Get main attributes.
         self._update_from(obj)
 
         # We have to decide how to initialize self.mask, based on
@@ -7302,14 +7302,14 @@ def diag(v, k=0):
             [False, False,  True]],
       fill_value=1e+20)
 
-    Isolate the nuclear_helper diagonal from the masked array:
+    Isolate the main diagonal from the masked array:
 
     >>> np.ma.diag(masked_x)
     masked_array(data=[11.2, --, --],
                  mask=[False,  True,  True],
            fill_value=1e+20)
 
-    Isolate the first diagonal below the nuclear_helper diagonal:
+    Isolate the first diagonal below the main diagonal:
 
     >>> np.ma.diag(masked_x, -1)
     masked_array(data=[0.801, 33.0],

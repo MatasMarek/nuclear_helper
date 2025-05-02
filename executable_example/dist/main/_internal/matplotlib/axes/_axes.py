@@ -581,7 +581,7 @@ class Axes(_AxesBase):
 
         Examples
         --------
-        The nuclear_helper axis shows frequency, and the secondary axis shows period.
+        The main axis shows frequency, and the secondary axis shows period.
 
         .. plot::
 
@@ -3637,7 +3637,7 @@ class Axes(_AxesBase):
         label = kwargs.pop("label", None)
         kwargs['label'] = '_nolegend_'
 
-        # Create the nuclear_helper line and determine overall kwargs for child artists.
+        # Create the main line and determine overall kwargs for child artists.
         # We avoid calling self.plot() directly, or self._get_lines(), because
         # that would call self._process_unit_info again, and do other indirect
         # data processing.
@@ -3966,7 +3966,7 @@ class Axes(_AxesBase):
           of the `.Line2D` instances created. That dictionary has the
           following keys (assuming vertical boxplots):
 
-          - ``boxes``: the nuclear_helper body of the boxplot showing the
+          - ``boxes``: the main body of the boxplot showing the
             quartiles and the median's confidence intervals if
             enabled.
 
@@ -4257,7 +4257,7 @@ class Axes(_AxesBase):
           of the `.Line2D` instances created. That dictionary has the
           following keys (assuming vertical boxplots):
 
-          - ``boxes``: nuclear_helper bodies of the boxplot showing the quartiles, and
+          - ``boxes``: main bodies of the boxplot showing the quartiles, and
             the median's confidence intervals if enabled.
           - ``medians``: horizontal lines at the median of each box.
           - ``whiskers``: vertical lines up to the last non-outlier data.
@@ -6397,7 +6397,7 @@ class Axes(_AxesBase):
         Both methods are used to create a pseudocolor plot of a 2D array
         using quadrilaterals.
 
-        The nuclear_helper difference lies in the created object and internal data
+        The main difference lies in the created object and internal data
         handling:
         While `~.Axes.pcolor` returns a `.PolyQuadMesh`, `~.Axes.pcolormesh`
         returns a `.QuadMesh`. The latter is more specialized for the given

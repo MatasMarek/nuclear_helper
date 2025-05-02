@@ -2,7 +2,7 @@
 Contains the core of NumPy: ndarray, ufuncs, dtypes, etc.
 
 Please note that this module is private.  All functions and objects
-are available in the nuclear_helper ``numpy`` namespace - use that instead.
+are available in the main ``numpy`` namespace - use that instead.
 
 """
 
@@ -11,7 +11,7 @@ import os
 from numpy.version import version as __version__
 
 
-# disables OpenBLAS affinity setting of the nuclear_helper thread that limits
+# disables OpenBLAS affinity setting of the main thread that limits
 # python threads or processes to one core
 env_added = []
 for envkey in ['OPENBLAS_MAIN_FREE', 'GOTOBLAS_MAIN_FREE']:

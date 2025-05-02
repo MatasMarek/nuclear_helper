@@ -173,7 +173,7 @@ class config(old_config):
                    headers=None, include_dirs=None):
         self._check_compiler()
         body = textwrap.dedent("""
-            int nuclear_helper(void)
+            int main(void)
             {
             #ifndef %s
                 (void) %s;
@@ -188,7 +188,7 @@ class config(old_config):
                          headers=None, include_dirs=None):
         self._check_compiler()
         body = textwrap.dedent("""
-            int nuclear_helper(void)
+            int main(void)
             {
             #if %s
             #else
@@ -208,7 +208,7 @@ class config(old_config):
 
         # First check the type can be compiled
         body = textwrap.dedent(r"""
-            int nuclear_helper(void) {
+            int main(void) {
               if ((%(name)s *) 0)
                 return 0;
               if (sizeof (%(name)s))
@@ -236,7 +236,7 @@ class config(old_config):
         # First check the type can be compiled
         body = textwrap.dedent(r"""
             typedef %(type)s npy_check_sizeof_type;
-            int nuclear_helper (void)
+            int main (void)
             {
                 static int test_array [1 - 2 * !(((long) (sizeof (npy_check_sizeof_type))) >= 0)];
                 test_array [0] = 0
@@ -252,7 +252,7 @@ class config(old_config):
         if expected:
             body = textwrap.dedent(r"""
                 typedef %(type)s npy_check_sizeof_type;
-                int nuclear_helper (void)
+                int main (void)
                 {
                     static int test_array [1 - 2 * !(((long) (sizeof (npy_check_sizeof_type))) == %(size)s)];
                     test_array [0] = 0
@@ -273,7 +273,7 @@ class config(old_config):
         # this fails to *compile* if size > sizeof(type)
         body = textwrap.dedent(r"""
             typedef %(type)s npy_check_sizeof_type;
-            int nuclear_helper (void)
+            int main (void)
             {
                 static int test_array [1 - 2 * !(((long) (sizeof (npy_check_sizeof_type))) <= %(size)s)];
                 test_array [0] = 0
@@ -316,7 +316,7 @@ class config(old_config):
                    headers=None, include_dirs=None,
                    libraries=None, library_dirs=None,
                    decl=False, call=False, call_args=None):
-        # clean up distutils's config a bit: add void to nuclear_helper(), and
+        # clean up distutils's config a bit: add void to main(), and
         # return a value.
         self._check_compiler()
         body = []
@@ -332,7 +332,7 @@ class config(old_config):
         body.append("#ifdef _MSC_VER")
         body.append("#pragma function(%s)" % func)
         body.append("#endif")
-        body.append("int nuclear_helper (void) {")
+        body.append("int main (void) {")
         if call:
             if call_args is None:
                 call_args = ''
@@ -386,7 +386,7 @@ class config(old_config):
             body.append("#pragma function(%s)" % func)
         body.append("#endif")
 
-        body.append("int nuclear_helper (void) {")
+        body.append("int main (void) {")
         if call:
             for f in funcs:
                 if f in call and call[f]:

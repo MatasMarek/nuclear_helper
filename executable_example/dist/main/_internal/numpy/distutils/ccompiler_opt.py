@@ -77,7 +77,7 @@ class _Config:
 
     conf_cc_flags : dict
         Nested dictionaries defining several compiler flags
-        that linked to some major functions, the nuclear_helper key
+        that linked to some major functions, the main key
         represent the compiler name and sub-keys represent
         flags names. Default is already covers all supported
         **C** compilers.
@@ -167,7 +167,7 @@ class _Config:
             It should contain at least one intrinsic or function related to the test case.
 
             If the compiler able to successfully compile the C file then `CCompilerOpt`
-            will add a C ``#define`` for it into the nuclear_helper dispatch header, e.g.
+            will add a C ``#define`` for it into the main dispatch header, e.g.
             ``#define {conf_c_prefix}_XXXX`` where ``XXXX`` is the case name in upper case.
 
         **NOTES**:
@@ -1709,7 +1709,7 @@ class _Feature:
         return '\n'.join(prepr)
 
 class _Parse:
-    """A helper class that parsing nuclear_helper arguments of `CCompilerOpt`,
+    """A helper class that parsing main arguments of `CCompilerOpt`,
     also parsing configuration statements in dispatch-able sources.
 
     Parameters

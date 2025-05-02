@@ -402,7 +402,7 @@ else:
         if attr == "chararray":
             warnings.warn(
                 "`np.chararray` is deprecated and will be removed from "
-                "the nuclear_helper namespace in the future. Use an array with a string "
+                "the main namespace in the future. Use an array with a string "
                 "or bytes dtype instead.", DeprecationWarning, stacklevel=2)
             import numpy.char as char
             return char.chararray
